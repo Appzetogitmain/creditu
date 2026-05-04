@@ -115,7 +115,7 @@ const About = () => {
                   <h2 className="text-3xl font-black text-primary mb-6">Who we are?</h2>
                   <div className="space-y-6">
                     <p className="text-lg text-textSecondary leading-relaxed">
-                      <span className="font-bold text-primary">creditU</span> is a Bangalore-based fintech platform building India's first <span className="text-gold font-bold">micro UPI credit line</span> for daily commuters. We believe every Indian deserves access to fair, transparent credit — without the hassle of a credit card or a bank visit.
+                      <span className="font-bold text-primary">creditU</span> is a Bangalore-based fintech platform offering a <span className="text-gold font-bold">credit line</span> and <span className="text-gold font-bold">personal loan</span> for daily commuters. We believe every Indian deserves access to fair, transparent credit — without the hassle of a credit card or a bank visit.
                     </p>
                     <p className="text-lg text-textSecondary leading-relaxed">
                       We are a <span className="font-bold text-primary">Lending Service Provider (LSP)</span> working in partnership with RBI-licensed NBFCs to offer customers a pre-approved credit line and Personal Loan. Customers can use this credit line to pay any UPI merchant directly from the creditU app — and repay in simple monthly EMIs.
