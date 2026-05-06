@@ -11,6 +11,7 @@ import CheckEligibility from '../modules/user/pages/CheckEligibility/CheckEligib
 import DocumentRejected from '../modules/user/pages/Status/DocumentRejected';
 import LoanApproved from '../modules/user/pages/Status/LoanApproved';
 import AuthScreen from '../modules/user/pages/Auth/AuthScreen';
+import Permissions from '../modules/user/pages/Splash/Permissions';
 
 // ── Admin Panel ───────────────────────────────────────────
 import AdminLayout from '../modules/admin/layout/AdminLayout';
@@ -38,8 +39,11 @@ import LegalTerms from '../modules/website/pages/LegalTerms';
 const AppRoutes = () => {
     return (
         <Routes>
+            {/* ── App Starting Flow ─────────────────────── */}
+            <Route path="/" element={<Splash />} />
+            
             {/* ── Website / Landing Page ─────────────────────── */}
-            <Route path="/" element={<LandingPage />} />
+            <Route path="/website" element={<LandingPage />} />
             <Route path="/download" element={<DownloadApp />} />
             <Route path="/about" element={<About />} />
             <Route path="/legal/privacy" element={<LegalPrivacy />} />
@@ -48,6 +52,7 @@ const AppRoutes = () => {
             {/* ── User Module (Grouped under /user) ───────────── */}
             <Route path="/user">
                 <Route index element={<Splash />} />
+                <Route path="permissions" element={<Permissions />} />
                 <Route path="auth" element={<AuthScreen />} />
                 <Route path="login" element={<Login />} />
                 <Route path="register" element={<UserRegister />} />
