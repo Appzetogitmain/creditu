@@ -46,8 +46,11 @@ const Dashboard = () => {
         { id: 6, icon: Stethoscope, title: 'Medical Loan', disabled: true },
     ];
 
-    const handleApply = () => {
-        navigate('/user/eligibility');
+    const handleApply = (offer) => {
+        if (offer) {
+            sessionStorage.setItem('creditu:selectedLoanOffer', JSON.stringify(offer));
+        }
+        navigate('/user/loan-details');
     };
 
     const categoriesRef = useRef(null);
@@ -108,7 +111,11 @@ const Dashboard = () => {
                     <div className="flex overflow-x-auto gap-8 pb-10 -mx-4 px-4 snap-x no-scrollbar">
                         {loanOffers.map((offer) => (
                             <div key={offer.id} className="snap-center">
-                                <LoanCard {...offer} comingSoon={offer.status === 'Coming Soon'} onApply={handleApply} />
+                                <LoanCard
+                                    {...offer}
+                                    comingSoon={offer.status === 'Coming Soon'}
+                                    onApply={() => handleApply(offer)}
+                                />
                             </div>
                         ))}
                     </div>

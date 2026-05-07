@@ -13,6 +13,7 @@ import DocumentRejected from '../modules/user/pages/Status/DocumentRejected';
 import LoanApproved from '../modules/user/pages/Status/LoanApproved';
 import AuthScreen from '../modules/user/pages/Auth/AuthScreen';
 import Permissions from '../modules/user/pages/Splash/Permissions';
+import LoanDetails from '../modules/user/pages/LoanDetails/LoanDetails';
 
 // ── Admin Panel ───────────────────────────────────────────
 import AdminLayout from '../modules/admin/layout/AdminLayout';
@@ -58,6 +59,7 @@ const AppRoutes = () => {
                 <Route path="login" element={<Login />} />
                 <Route path="register" element={<UserRegister />} />
                 <Route path="dashboard" element={<Dashboard />} />
+                <Route path="loan-details" element={<LoanDetails />} />
                 <Route path="kyc" element={<KYCVerification />} />
                 <Route path="eligibility" element={<CheckEligibility />} />
                 <Route path="rewards" element={<Rewards />} />

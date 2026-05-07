@@ -88,11 +88,25 @@ const LoanCard = ({ type, rate, amount, gradient = 'blue', comingSoon = false, i
     );
   }
 
+  const handleApply = () => {
+    if (comingSoon || isBlank) return;
+    onApply?.({ type, rate, amount, gradient, description, comingSoon });
+  };
+
   return (
     <div className="perspective-1000">
       <div
         ref={cardRef}
-        className={`relative w-[340px] h-[210px] rounded-[24px] p-6 text-white shadow-2xl transition-all duration-300 preserve-3d overflow-hidden ${gradients[gradient]} ${comingSoon ? 'opacity-90 grayscale-[0.5]' : ''}`}
+        role={!comingSoon && !isBlank ? 'button' : undefined}
+        tabIndex={!comingSoon && !isBlank ? 0 : undefined}
+        onClick={handleApply}
+        onKeyDown={(e) => {
+          if ((e.key === 'Enter' || e.key === ' ') && !comingSoon && !isBlank) {
+            e.preventDefault();
+            handleApply();
+          }
+        }}
+        className={`relative w-[340px] h-[210px] rounded-[24px] p-6 text-white shadow-2xl transition-all duration-300 preserve-3d overflow-hidden ${gradients[gradient]} ${comingSoon ? 'opacity-90 grayscale-[0.5]' : ''} ${!comingSoon && !isBlank ? 'cursor-pointer' : ''}`}
       >
         {/* Glow Effect */}
         <div
@@ -149,7 +163,10 @@ const LoanCard = ({ type, rate, amount, gradient = 'blue', comingSoon = false, i
             </p>
             {!comingSoon && (
               <motion.button
-                onClick={onApply}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleApply();
+                }}
                 whileHover={{ scale: 1.1, x: 5 }}
                 whileTap={{ scale: 0.9 }}
                 className="bg-white text-primary p-2.5 rounded-xl shadow-lg shadow-black/20"
