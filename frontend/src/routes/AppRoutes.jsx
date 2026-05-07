@@ -8,6 +8,7 @@ import Splash from '../modules/user/pages/Splash/Splash';
 import KYCVerification from '../modules/user/pages/KYC/KYCVerification';
 import ProfileCompletion from '../modules/user/pages/Profile/ProfileCompletion';
 import CheckEligibility from '../modules/user/pages/CheckEligibility/CheckEligibility';
+import Rewards from '../modules/user/pages/Rewards/Rewards';
 import DocumentRejected from '../modules/user/pages/Status/DocumentRejected';
 import LoanApproved from '../modules/user/pages/Status/LoanApproved';
 import AuthScreen from '../modules/user/pages/Auth/AuthScreen';
@@ -59,6 +60,7 @@ const AppRoutes = () => {
                 <Route path="dashboard" element={<Dashboard />} />
                 <Route path="kyc" element={<KYCVerification />} />
                 <Route path="eligibility" element={<CheckEligibility />} />
+                <Route path="rewards" element={<Rewards />} />
                 <Route path="status" element={<ProfileCompletion />} />
                 <Route path="status/rejected" element={<DocumentRejected />} />
                 <Route path="status/approved" element={<LoanApproved />} />
