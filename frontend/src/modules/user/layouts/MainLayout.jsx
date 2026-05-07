@@ -16,11 +16,7 @@ const MainLayout = ({ children }) => {
         return () => media.removeEventListener('change', sync);
     }, []);
 
-    useEffect(() => {
-        if (isDesktop) {
-            setMobileSidebarOpen(false);
-        }
-    }, [isDesktop]);
+    // Removed the force-close effect so desktop drawer can remain open if toggled
 
     return (
         <div className="min-h-screen flex flex-col relative overflow-hidden">
@@ -34,10 +30,10 @@ const MainLayout = ({ children }) => {
                 isDesktop={isDesktop}
                 onClose={() => setMobileSidebarOpen(false)}
             />
-            <main className="flex-1 pt-[88px] relative z-10 md:pl-[290px]">
+            <main className="flex-1 pt-[88px] relative z-10">
                 {children}
             </main>
-            <div className="md:pl-[290px]">
+            <div className="hidden md:block">
                 <Footer />
             </div>
         </div>

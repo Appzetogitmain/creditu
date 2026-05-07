@@ -54,27 +54,27 @@ const Sidebar = ({ mobileOpen = false, onClose, isDesktop = false }) => {
   return (
     <>
       <AnimatePresence>
-        {mobileOpen && !isDesktop && (
+        {mobileOpen && (
           <motion.button
             aria-label="Close sidebar"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-[120] bg-slate-950/35 backdrop-blur-[3px] md:hidden"
+            className="fixed inset-0 z-[120] bg-slate-950/35 backdrop-blur-[3px]"
           />
         )}
       </AnimatePresence>
 
       <motion.aside
         initial={false}
-        animate={{ x: isDesktop || mobileOpen ? 0 : '-100%' }}
+        animate={{ x: mobileOpen ? 0 : '-100%' }}
         transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
-        className="fixed left-0 top-0 z-[130] h-screen w-[86vw] max-w-[320px] border-r border-slate-200 bg-white backdrop-blur-xl shadow-[18px_0_45px_rgba(11,60,109,0.06)] md:w-[290px] md:max-w-none md:shadow-none"
+        className="fixed left-0 top-0 z-[130] h-screen w-[86vw] max-w-[320px] border-r border-slate-200 bg-white backdrop-blur-xl shadow-[18px_0_45px_rgba(11,60,109,0.06)]"
       >
         <div className="flex h-full flex-col px-4 py-4">
           <div className="flex items-center justify-between border-b border-slate-100 pb-4">
-            <div className="flex items-center gap-3 md:hidden">
+            <div className="flex items-center gap-3">
               <span className="inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white">
                 <img
                   src={mobileLogo}
@@ -85,12 +85,6 @@ const Sidebar = ({ mobileOpen = false, onClose, isDesktop = false }) => {
               <div>
                 <p className="text-[10px] font-medium tracking-[0.12em] text-slate-400">Creditu</p>
                 <p className="text-sm font-semibold text-[#0B3C6D]">Account menu</p>
-              </div>
-            </div>
-            <div className="hidden items-center gap-3 md:flex">
-              <div>
-                <p className="text-[10px] font-medium tracking-[0.12em] text-slate-400">Creditu</p>
-                <p className="text-sm font-semibold text-[#0B3C6D]">Personal Finance</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
