@@ -86,7 +86,7 @@ const WebsiteNavbar = () => {
           </div>
 
           <button 
-            onClick={() => navigate('/download')}
+            onClick={() => navigate('/user')}
             className="btn-premium btn-primary-website py-3 px-6 shadow-gold hover:shadow-gold-lg"
           >
             Get Started <ArrowRight size={18} />

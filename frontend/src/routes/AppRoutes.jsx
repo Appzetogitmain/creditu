@@ -35,23 +35,22 @@ import { nbfcRoutes } from '../modules/nbfc/nbfcRoutes';
 import LandingPage from '../modules/website/pages/LandingPage';
 import DownloadApp from '../modules/website/pages/DownloadApp';
 import About from '../modules/website/pages/About';
+
+
 import LegalPrivacy from '../modules/website/pages/LegalPrivacy';
 import LegalTerms from '../modules/website/pages/LegalTerms';
 
 const AppRoutes = () => {
     return (
         <Routes>
-            {/* ── App Starting Flow ─────────────────────── */}
-            <Route path="/" element={<Splash />} />
-            
-            {/* ── Website / Landing Page ─────────────────────── */}
-            <Route path="/website" element={<LandingPage />} />
+            {/* ── Website / Landing Page (Root) ─────────────────────── */}
+            <Route path="/" element={<LandingPage />} />
             <Route path="/download" element={<DownloadApp />} />
             <Route path="/about" element={<About />} />
             <Route path="/legal/privacy" element={<LegalPrivacy />} />
             <Route path="/legal/terms" element={<LegalTerms />} />
 
-            {/* ── User Module (Grouped under /user) ───────────── */}
+            {/* ── User Module (App - Grouped under /user) ───────────── */}
             <Route path="/user">
                 <Route index element={<Splash />} />
                 <Route path="permissions" element={<Permissions />} />
