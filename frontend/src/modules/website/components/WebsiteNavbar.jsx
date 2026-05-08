@@ -43,7 +43,7 @@ const WebsiteNavbar = () => {
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2 cursor-pointer" onClick={handleLogoClick}>
+        <div className={`flex items-center gap-2 cursor-pointer transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-0 invisible pointer-events-none' : 'opacity-100 visible'}`} onClick={handleLogoClick}>
           <img src="/image.png" alt="creditU" className="h-10 w-auto" />
         </div>
 
