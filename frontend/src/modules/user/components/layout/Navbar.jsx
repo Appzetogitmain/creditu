@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { BellRing, Menu, TrendingUp, Search } from 'lucide-react';
-import mobileLogo from '../../../../assets/logo-icon-mobile.png';
+import fullLogo from '../../../../assets/logo.png';
 
 const Navbar = ({ onMenuClick }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -22,26 +22,17 @@ const Navbar = ({ onMenuClick }) => {
 
   return (
     <header
-      className="fixed left-0 top-0 z-[110] h-[72px] w-full border-b border-[rgba(11,60,109,0.08)] bg-white/90 backdrop-blur-xl"
+      className="fixed left-0 top-0 z-[110] h-[72px] w-full border-b border-slate-100 bg-white"
       style={{ boxShadow: '0 1px 18px rgba(11,60,109,0.05)' }}
     >
       <div className="flex h-full items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-3">
-          <Link to="/user/dashboard" className="flex items-center gap-2">
-            <span className="inline-flex h-[46px] w-[46px] flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-white shadow-sm">
-              <img
-                src={mobileLogo}
-                alt="Creditu"
-                className="h-10 w-10 object-contain"
-              />
-            </span>
-            {/* Hide text on very small screens to make room for search */}
-            <div className={`hidden ${isSearchOpen ? 'md:block' : 'sm:block'} transition-all`}>
-              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-400">
-                Personal finance
-              </p>
-              <p className="text-sm font-black text-[#0B3C6D]">Account dashboard</p>
-            </div>
+          <Link to="/user/dashboard" className="flex items-center">
+            <img
+              src={fullLogo}
+              alt="Creditu"
+              className="h-10 w-auto object-contain"
+            />
           </Link>
         </div>
 
@@ -52,7 +43,7 @@ const Navbar = ({ onMenuClick }) => {
               <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-emerald-700">
                 Credit score
               </p>
-              <p className="text-sm font-black text-emerald-700 leading-none">{user.score}</p>
+              <p className="text-sm font-black text-emerald-700 leading-none mt-0.5">{user.score}</p>
             </div>
           </div>
 
@@ -100,7 +91,7 @@ const Navbar = ({ onMenuClick }) => {
             </div>
             <div className="leading-tight">
               <p className="text-xs font-black text-[#0B3C6D]">{user.name}</p>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-400">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-400 mt-0.5">
                 Priority account
               </p>
             </div>

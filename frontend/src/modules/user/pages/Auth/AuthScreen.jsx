@@ -64,14 +64,14 @@ const AuthScreen = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#fafafa] flex items-center justify-center font-sans p-4">
+        <div className="min-h-screen bg-white flex flex-col font-sans">
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="w-full max-w-md bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden border border-gray-100"
+                className="flex-1 flex flex-col h-screen"
             >
-                <div className="p-8">
+                <div className="flex-1 p-8 flex flex-col justify-center">
                     {/* Logo Section */}
                     <div className="flex justify-center mb-8">
                         <motion.div
@@ -154,28 +154,28 @@ const AuthScreen = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -20 }}
                                 transition={{ duration: 0.3 }}
-                                className="space-y-6"
+                                className="flex flex-col"
                             >
-                                <button onClick={resetFlow} className="flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-[#1A453A] transition-colors mb-2 -ml-2 p-2">
+                                <button onClick={resetFlow} className="flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-[#1A453A] transition-colors mb-4 -ml-2 p-2 w-max">
                                     <ArrowLeft size={16} /> Back
                                 </button>
 
-                                <div className="mb-8">
-                                    <h2 className="text-[24px] font-bold text-[#1a1a1a] mb-2">Verify Phone</h2>
+                                <div className="mb-6">
+                                    <h2 className="text-[24px] font-bold text-[#1a1a1a] mb-1">Verify Phone</h2>
                                     <p className="text-[#666] text-sm leading-relaxed">
                                         We've sent a 4-digit secure code to <br />
                                         <span className="font-semibold text-[#1A453A]">+91 {mobile}</span>
-                                        <span className="block mt-1 text-xs text-gray-400">(Hint: Use 1234)</span>
+                                        <span className="block mt-0.5 text-[11px] text-gray-400">(Hint: Use 1234)</span>
                                     </p>
                                 </div>
 
-                                <div className="mb-4">
+                                <div className="mb-6">
                                     <OTPInput value={otp} onChange={setOtp} error={!!error} />
                                 </div>
 
                                 {error && (
                                     <motion.p animate={{ x: [-4, 4, -4, 4, 0] }} transition={{ duration: 0.3 }}
-                                        className="text-xs text-red-500 font-semibold text-center mt-2 mb-4"
+                                        className="text-xs text-red-500 font-semibold text-center mb-4 -mt-2"
                                     >
                                         {error}
                                     </motion.p>
@@ -184,7 +184,7 @@ const AuthScreen = () => {
                                 <button 
                                     onClick={handleVerifyOTP} 
                                     disabled={loading}
-                                    className="w-full py-[16px] rounded-2xl bg-[#1A453A] text-white font-semibold text-[15px] hover:bg-[#13352B] active:scale-[0.98] transition-all shadow-md flex items-center justify-center mt-6 disabled:opacity-70"
+                                    className="w-full py-[14px] rounded-2xl bg-[#1A453A] text-white font-semibold text-[15px] hover:bg-[#13352B] active:scale-[0.98] transition-all shadow-md flex items-center justify-center disabled:opacity-70 mb-4"
                                 >
                                     {loading ? (
                                         <svg className="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
@@ -196,7 +196,7 @@ const AuthScreen = () => {
                                     )}
                                 </button>
 
-                                <div className="text-center mt-6">
+                                <div className="text-center">
                                     <button disabled={resendTimer > 0}
                                         className="flex items-center justify-center gap-2 text-sm font-semibold text-[#1A453A] disabled:text-gray-400 mx-auto transition-colors w-full p-2"
                                         onClick={() => setResendTimer(30)}>
@@ -225,7 +225,7 @@ const AuthScreen = () => {
                 </div>
                 
                 {/* Security Footer */}
-                <div className="bg-[#f8f9fa] py-4 px-6 border-t border-gray-100 flex items-center justify-center gap-2">
+                <div className="mt-auto bg-[#f8f9fa] py-6 px-6 border-t border-gray-100 flex items-center justify-center gap-2 flex-shrink-0">
                     <ShieldCheck size={16} className="text-green-600" />
                     <span className="text-[11px] font-bold text-gray-500 uppercase tracking-widest">256-bit SSL • 100% Secure</span>
                 </div>

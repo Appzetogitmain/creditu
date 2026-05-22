@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Wallet, Coins, ShieldCheck, Trophy } from 'lucide-react';
+import { Wallet, Coins, ShieldCheck, Trophy, Briefcase, Activity } from 'lucide-react';
 
 const Splash = () => {
     const navigate = useNavigate();
@@ -24,13 +24,11 @@ const Splash = () => {
                     transition={{ duration: 0.5 }}
                     className="flex flex-col items-center mb-8"
                 >
-                    <div className="bg-white/40 p-2 rounded-2xl backdrop-blur-sm border border-white/50 shadow-sm">
-                        <img
-                            src="/images/image.png"
-                            alt="Creditu"
-                            className="h-10 w-auto object-contain mix-blend-multiply"
-                        />
-                    </div>
+                    <img
+                        src="/images/image.png"
+                        alt="Creditu"
+                        className="h-12 w-auto object-contain mix-blend-multiply"
+                    />
                 </motion.div>
 
                 {/* Hero Text */}
@@ -41,11 +39,11 @@ const Splash = () => {
                     className="text-center mb-6"
                 >
                     <h1 className="text-[28px] font-bold text-[#3E3071] leading-tight mb-2 tracking-tight">
-                        Win from Rewards<br />worth
+                        Get up to
                     </h1>
                     <div className="relative inline-block">
                         <span className="text-5xl font-black text-[#13A360] drop-shadow-sm tracking-tighter">
-                            ₹10,00,000<span className="text-2xl align-top">*</span>
+                            ₹1,00,000<span className="text-2xl align-top">*</span>
                         </span>
                         {/* Little floating coins around amount */}
                         <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 2 }} className="absolute -top-4 -right-4 text-[#F4A100]">
@@ -101,21 +99,21 @@ const Splash = () => {
                     
                     <div className="flex flex-col items-center text-center gap-2">
                         <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-[#555]">
-                            <Coins size={24} strokeWidth={1.5} />
+                            <Activity size={24} strokeWidth={1.5} />
                         </div>
                         <div>
-                            <div className="font-bold text-[#222] text-[13px]">Digital Gold</div>
-                            <div className="text-gray-400 text-[11px]">Start from ₹10</div>
+                            <div className="font-bold text-[#222] text-[13px]">Medical Loan</div>
+                            <div className="text-gray-400 text-[11px]">Instant Approval</div>
                         </div>
                     </div>
 
                     <div className="flex flex-col items-center text-center gap-2">
                         <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-[#555]">
-                            <ShieldCheck size={24} strokeWidth={1.5} />
+                            <Briefcase size={24} strokeWidth={1.5} />
                         </div>
                         <div>
-                            <div className="font-bold text-[#222] text-[13px]">Secure App</div>
-                            <div className="text-gray-400 text-[11px]">100% Secure</div>
+                            <div className="font-bold text-[#222] text-[13px]">Business Loan</div>
+                            <div className="text-gray-400 text-[11px]">Grow your business</div>
                         </div>
                     </div>
                 </div>

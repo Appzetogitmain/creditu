@@ -9,6 +9,7 @@ import KYCVerification from '../modules/user/pages/KYC/KYCVerification';
 import ProfileCompletion from '../modules/user/pages/Profile/ProfileCompletion';
 import CheckEligibility from '../modules/user/pages/CheckEligibility/CheckEligibility';
 import Rewards from '../modules/user/pages/Rewards/Rewards';
+import Leadership from '../modules/user/pages/Leadership/Leadership';
 import DocumentRejected from '../modules/user/pages/Status/DocumentRejected';
 import LoanApproved from '../modules/user/pages/Status/LoanApproved';
 import AuthScreen from '../modules/user/pages/Auth/AuthScreen';
@@ -61,6 +62,7 @@ const AppRoutes = () => {
                 <Route path="loan-details" element={<LoanDetails />} />
                 <Route path="kyc" element={<KYCVerification />} />
                 <Route path="eligibility" element={<CheckEligibility />} />
+                <Route path="leadership" element={<Leadership />} />
                 <Route path="rewards" element={<Rewards />} />
                 <Route path="status" element={<ProfileCompletion />} />
                 <Route path="status/rejected" element={<DocumentRejected />} />

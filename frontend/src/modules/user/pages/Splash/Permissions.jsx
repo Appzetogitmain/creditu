@@ -14,16 +14,16 @@ const Permissions = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#fafafa] flex items-center justify-center font-sans p-4 md:p-8">
+        <div className="min-h-screen bg-white flex flex-col font-sans">
             <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
-                className="w-full max-w-[420px] bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] overflow-hidden border border-gray-100 flex flex-col max-h-[90vh]"
+                className="flex-1 flex flex-col h-screen"
             >
                 {/* Header / Title */}
-                <div className="px-6 pt-8 pb-4 flex-shrink-0 bg-white z-10 border-b border-gray-50">
-                    <h1 className="text-2xl font-bold text-[#1a1a1a] leading-tight">
+                <div className="px-6 pt-12 pb-6 flex-shrink-0 bg-white z-10">
+                    <h1 className="text-[28px] font-bold text-[#1a1a1a] leading-tight">
                         We need a<br />few permissions!
                     </h1>
                 </div>
@@ -71,7 +71,7 @@ const Permissions = () => {
                 </div>
 
                 {/* Bottom Fixed Area */}
-                <div className="flex-shrink-0 px-6 pt-4 pb-6 bg-white border-t border-gray-100 z-10">
+                <div className="flex-shrink-0 px-6 pt-4 pb-8 bg-white border-t border-gray-100 z-10">
                     <div className="flex items-start gap-3 mb-5">
                         <div 
                             onClick={() => setAccepted(!accepted)}
