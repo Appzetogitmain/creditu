@@ -18,7 +18,6 @@ import mobileLogo from '../../../../assets/logo-icon-mobile.png';
 
 const navItems = [
   { icon: LayoutDashboard, label: 'Dashboard', sub: 'Account overview', path: '/user/dashboard' },
-  { icon: ShieldCheck, label: 'KYC Verification', sub: 'Identity status', path: '/user/kyc' },
   { icon: FileCheck2, label: 'Eligibility Check', sub: 'Borrowing criteria', path: '/user/eligibility' },
   { icon: BadgeIndianRupee, label: 'Application Status', sub: 'Loan journey progress', path: '/user/status' },
   { icon: Users, label: 'Leadership Team', sub: 'Meet our leaders', path: '/user/leadership' },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Dashboard from '../modules/user/pages/Dashboard/Dashboard';
 import Login from '../modules/user/pages/Auth/Login';
 import UserRegister from '../modules/user/pages/Auth/Register';
@@ -59,6 +59,7 @@ const AppRoutes = () => {
                 <Route path="login" element={<Login />} />
                 <Route path="register" element={<UserRegister />} />
                 <Route path="dashboard" element={<Dashboard />} />
+                <Route path="home" element={<Navigate to="/user/dashboard" replace />} />
                 <Route path="loan-details" element={<LoanDetails />} />
                 <Route path="kyc" element={<KYCVerification />} />
                 <Route path="eligibility" element={<CheckEligibility />} />

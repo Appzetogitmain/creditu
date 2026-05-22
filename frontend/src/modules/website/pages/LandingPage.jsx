@@ -7,7 +7,6 @@ import WebsiteKYCFlow from '../components/WebsiteKYCFlow';
 import WebsiteLiveProcess from '../components/WebsiteLiveProcess';
 import WebsiteSecurity from '../components/WebsiteSecurity';
 import WebsiteCTA from '../components/WebsiteCTA';
-import WebsiteLeadership from '../components/WebsiteLeadership';
 import WebsiteFooter from '../components/WebsiteFooter';
 
 const LandingPage = () => {
@@ -21,7 +20,6 @@ const LandingPage = () => {
       <WebsiteLiveProcess />
       <WebsiteSecurity />
       <WebsiteCTA />
-      <WebsiteLeadership />
       <WebsiteFooter />
     </div>
   );

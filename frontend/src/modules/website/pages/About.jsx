@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import WebsiteNavbar from '../components/WebsiteNavbar';
 import WebsiteFooter from '../components/WebsiteFooter';
+import WebsiteLeadership from '../components/WebsiteLeadership';
 import { ShieldCheck, Users, Landmark, FileText, CheckCircle2, TrendingUp, Wallet, MapPin } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -290,6 +291,7 @@ const About = () => {
         </section>
       </main>
 
+      <WebsiteLeadership />
       <WebsiteFooter />
     </div>
   );

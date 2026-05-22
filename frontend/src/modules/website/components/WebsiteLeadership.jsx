@@ -73,11 +73,11 @@ const WebsiteLeadership = () => {
             >
               <div className="relative w-32 h-32 mx-auto mb-6">
                 <div className="absolute inset-0 bg-gradient-to-tr from-emerald-100 to-emerald-50 rounded-full scale-110 group-hover:scale-125 transition-transform duration-500"></div>
-                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-md">
+                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-md bg-white">
                   <img 
                     src={leader.image} 
                     alt={leader.name} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover object-[50%_20%] group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
               </div>
