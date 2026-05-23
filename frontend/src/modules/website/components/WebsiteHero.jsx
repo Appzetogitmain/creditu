@@ -96,7 +96,7 @@ const WebsiteHero = () => {
           
           <div ref={buttonsRef} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <button 
-              onClick={() => navigate('/download')}
+              onClick={() => navigate('/check-eligibility')}
               className="btn-premium btn-primary-website py-3 px-8 text-base group"
             >
               Check Eligibility 

@@ -40,12 +40,14 @@ import About from '../modules/website/pages/About';
 
 import LegalPrivacy from '../modules/website/pages/LegalPrivacy';
 import LegalTerms from '../modules/website/pages/LegalTerms';
+import WebsiteEligibilityCheck from '../modules/website/pages/WebsiteEligibilityCheck';
 
 const AppRoutes = () => {
     return (
         <Routes>
             {/* ── Website / Landing Page (Root) ─────────────────────── */}
             <Route path="/" element={<LandingPage />} />
+            <Route path="/check-eligibility" element={<WebsiteEligibilityCheck />} />
             <Route path="/download" element={<DownloadApp />} />
             <Route path="/about" element={<About />} />
             <Route path="/legal/privacy" element={<LegalPrivacy />} />

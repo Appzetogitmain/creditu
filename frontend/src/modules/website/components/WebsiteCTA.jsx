@@ -60,7 +60,7 @@ const WebsiteCTA = () => {
                 Apply Now <ArrowRight size={20} className="ml-2" />
               </button>
               <button 
-                onClick={() => navigate('/download')}
+                onClick={() => navigate('/check-eligibility')}
                 className="btn-premium bg-white/10 text-white border border-white/20 py-3 px-8 text-base w-full sm:w-auto hover:bg-white/20 transition-all font-bold"
               >
                 Check Eligibility
