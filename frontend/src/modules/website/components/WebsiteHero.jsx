@@ -103,7 +103,9 @@ const WebsiteHero = () => {
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button 
-              onClick={() => navigate('/download')}
+              onClick={() => {
+                document.getElementById('loans')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="btn-premium bg-white border-2 border-slate-200 text-primary hover:border-primary py-3 px-8 text-base"
             >
               Get Started

@@ -112,7 +112,6 @@ const WebsiteEligibilityCheck = () => {
                         onChange={handleChange}
                       >
                         <option value="salaried">Salaried</option>
-                        <option value="self-employed">Self Employed</option>
                         <option value="business">Business</option>
                       </select>
                     </div>
