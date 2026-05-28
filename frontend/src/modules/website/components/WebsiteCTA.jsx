@@ -9,7 +9,7 @@ const WebsiteCTA = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo('.cta-animate', 
+      gsap.fromTo('.cta-animate',
         { y: 30, opacity: 0 },
         {
           y: 0,
@@ -53,13 +53,13 @@ const WebsiteCTA = () => {
             </p>
 
             <div className="cta-animate flex flex-col sm:flex-row items-center justify-center gap-6">
-              <button 
+              <button
                 onClick={() => navigate('/download')}
                 className="btn-premium btn-gold-website py-3 px-8 text-base w-full sm:w-auto shadow-[0_10px_30px_rgba(244,180,0,0.3)] hover:scale-105 transition-transform"
               >
                 Apply Now <ArrowRight size={20} className="ml-2" />
               </button>
-              <button 
+              <button
                 onClick={() => navigate('/check-eligibility')}
                 className="btn-premium bg-white/10 text-white border border-white/20 py-3 px-8 text-base w-full sm:w-auto hover:bg-white/20 transition-all font-bold"
               >
