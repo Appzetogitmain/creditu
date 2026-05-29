@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Users } from 'lucide-react';
 
-import selvinImg from '../../../assets/image.png';
-import arpitaImg from '../../../assets/image copy.png';
-import prabinImg from '../../../assets/image copy 2.png';
+import selvinImg from '../../../assets/image.webp';
+import arpitaImg from '../../../assets/image copy.webp';
+import prabinImg from '../../../assets/image copy 2.webp';
 
 const leaders = [
   {

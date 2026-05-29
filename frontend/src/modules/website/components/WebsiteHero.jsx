@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap, ShieldCheck, Clock, CheckCircle2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import rupeeIcon from '../../../assets/rupee_3d_icon.png';
+import rupeeIcon from '../../../assets/rupee_3d_icon.webp';
 
 const WebsiteHero = () => {
   const headingRef = useRef(null);

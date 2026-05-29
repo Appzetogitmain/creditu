@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-import selvinImg from '../../../../assets/image.png';
-import arpitaImg from '../../../../assets/image copy.png';
-import prabinImg from '../../../../assets/image copy 2.png';
+import selvinImg from '../../../../assets/image.webp';
+import arpitaImg from '../../../../assets/image copy.webp';
+import prabinImg from '../../../../assets/image copy 2.webp';
 
 const leaders = [
   {
