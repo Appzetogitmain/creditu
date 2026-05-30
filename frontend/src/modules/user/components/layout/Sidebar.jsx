@@ -14,7 +14,7 @@ import {
   TrendingUp,
   Star,
 } from 'lucide-react';
-import mobileLogo from '../../../../assets/logo-icon-mobile.png';
+import mobileLogo from '../../../../assets/logo-icon-mobile.webp';
 
 const navItems = [
   {

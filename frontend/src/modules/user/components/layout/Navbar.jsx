@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { BellRing, Menu, TrendingUp, Search } from 'lucide-react';
-import fullLogo from '../../../../assets/logo.png';
+import fullLogo from '../../../../assets/logo.webp';
 
 const Navbar = ({ onMenuClick }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
