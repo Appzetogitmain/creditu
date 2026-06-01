@@ -60,7 +60,7 @@ const Footer = () => {
               <li>
                 <p className="text-[10px] uppercase font-bold text-slate-400">Grievance Redressal</p>
                 <p className="font-semibold text-primary">grievance@creditu.in</p>
-                <p className="text-[10px] mt-1 text-primary">Selvin</p>
+                <p className="text-[10px] mt-1 text-primary">Rashmi</p>
               </li>
               <li>
                 <p className="text-[10px] uppercase font-bold text-slate-400">Corporate</p>

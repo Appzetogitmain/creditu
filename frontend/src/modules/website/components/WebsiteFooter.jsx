@@ -66,7 +66,7 @@ const WebsiteFooter = () => {
                   </div>
                   <div>
                     <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-1">Grievance Officer</p>
-                    <p className="text-primary font-bold text-sm">Name : Selvin</p>
+                    <p className="text-primary font-bold text-sm">Name : Rashmi</p>
                   </div>
                 </li>
               </ul>

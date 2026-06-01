@@ -88,7 +88,7 @@ export const revenueData = [
 export const loanDistribution = [
     { name: 'Personal Loan', value: 62, color: '#0A2C5A' },
     { name: 'Medical Loan', value: 18, color: '#00A651' },
-    { name: 'Career Loan', value: 12, color: '#F4A100' },
+    { name: 'Education Loan', value: 12, color: '#F4A100' },
     { name: 'Home Loan', value: 8, color: '#7c3aed' },
 ];
 
@@ -96,7 +96,7 @@ export const recentActivity = [
     { id: 'LN-20847', user: 'Priya Sharma', avatar: 'PS', amount: '₹2,50,000', status: 'Approved', date: '24 Feb 2026', type: 'Personal Loan' },
     { id: 'LN-20846', user: 'Rahul Gupta', avatar: 'RG', amount: '₹5,00,000', status: 'Pending', date: '24 Feb 2026', type: 'Medical Loan' },
     { id: 'LN-20845', user: 'Ananya Verma', avatar: 'AV', amount: '₹1,00,000', status: 'Approved', date: '23 Feb 2026', type: 'Personal Loan' },
-    { id: 'LN-20844', user: 'Karan Singh', avatar: 'KS', amount: '₹3,50,000', status: 'Rejected', date: '23 Feb 2026', type: 'Career Loan' },
+    { id: 'LN-20844', user: 'Karan Singh', avatar: 'KS', amount: '₹3,50,000', status: 'Rejected', date: '23 Feb 2026', type: 'Education Loan' },
     { id: 'LN-20843', user: 'Meera Patel', avatar: 'MP', amount: '₹7,50,000', status: 'Pending', date: '22 Feb 2026', type: 'Personal Loan' },
     { id: 'LN-20842', user: 'Amit Joshi', avatar: 'AJ', amount: '₹4,20,000', status: 'Approved', date: '22 Feb 2026', type: 'Medical Loan' },
     { id: 'LN-20841', user: 'Sonia Reddy', avatar: 'SR', amount: '₹2,00,000', status: 'Rejected', date: '21 Feb 2026', type: 'Personal Loan' },
@@ -180,7 +180,7 @@ export const loansData = [
         emiBreakdown: [],
     },
     {
-        id: 'LN-20844', userId: 'U-10004', user: 'Karan Singh', avatar: 'KS', type: 'Career Loan',
+        id: 'LN-20844', userId: 'U-10004', user: 'Karan Singh', avatar: 'KS', type: 'Education Loan',
         amount: 350000, tenure: 48, interest: 11.0, emi: 9050, status: 'Rejected',
         appliedDate: '15 Feb 2026', approvedDate: null, disbursedDate: null,
         purpose: 'MBA Fees', city: 'Pune',
@@ -287,7 +287,7 @@ export const featuredLoansData = [
     },
     {
         id: 3,
-        type: 'Career Loan',
+        type: 'Education Loan',
         amount: '15,00,000',
         rate: '8.5',
         gradient: 'green',

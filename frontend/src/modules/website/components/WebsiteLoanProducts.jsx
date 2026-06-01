@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ArrowUpRight, Lock } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -32,7 +32,7 @@ const products = [
     textColor: 'text-primary',
   },
   {
-    title: 'Career Loan',
+    title: 'Education Loan',
     limit: '₹ 3,00,000',
     interest: 'lowest interest',
     status: 'COMING SOON',

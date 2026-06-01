@@ -42,7 +42,7 @@ const Dashboard = () => {
         { id: 2, icon: UserCheck, title: 'KYC Verification', status: 'Action', path: '/user/kyc' },
         { id: 3, icon: MapPin, title: 'Income Details', status: 'Pending', path: '/user/kyc' },
         { id: 4, icon: ShieldCheck, title: 'Selfie Verification', status: 'Pending', path: '/user/kyc' },
-        { id: 5, icon: Briefcase, title: 'Career Loan', disabled: true },
+        { id: 5, icon: Briefcase, title: 'Education Loan', disabled: true },
         { id: 6, icon: Stethoscope, title: 'Medical Loan', disabled: true },
     ];
 
