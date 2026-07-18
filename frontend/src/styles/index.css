@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,18 +28,19 @@
   body {
     @apply antialiased;
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', system-ui, sans-serif;
     background: var(--bg-gradient);
     color: var(--text-primary);
     min-height: 100vh;
     background-attachment: fixed;
     transition: background 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-premium;
+    @apply bg-white/60 backdrop-blur-xl border border-white/40 shadow-premium;
   }
 
   .card-gradient-blue {

@@ -110,7 +110,7 @@ const Sidebar = ({ mobileOpen = false, onClose }) => {
         initial={false}
         animate={{ x: mobileOpen ? 0 : '100%' }}
         transition={{ type: 'spring', stiffness: 320, damping: 32 }}
-        className="fixed right-0 top-0 z-[130] h-screen w-[88vw] max-w-[340px] bg-white shadow-2xl flex flex-col font-sans"
+        className="fixed right-0 top-0 z-[130] h-screen w-full bg-white shadow-2xl flex flex-col font-sans"
         style={{ boxShadow: '-8px 0 40px rgba(0,0,0,0.18)' }}
       >
         {/* ── Gradient Header ── */}
@@ -136,10 +136,10 @@ const Sidebar = ({ mobileOpen = false, onClose }) => {
               <img src={mobileLogo} alt="Creditu" className="h-5 w-5 object-contain" />
             </div>
             <div>
-              <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/60">
+              <p className="text-[9px] font-medium uppercase tracking-[0.2em] text-white/60">
                 Creditu
               </p>
-              <p className="text-[15px] font-bold text-white leading-tight">Account menu</p>
+              <p className="text-[15px] font-medium text-white leading-tight">Account menu</p>
             </div>
           </div>
 
@@ -173,15 +173,15 @@ const Sidebar = ({ mobileOpen = false, onClose }) => {
               <span className="absolute bottom-0.5 right-0.5 h-2.5 w-2.5 rounded-full border-2 border-white bg-emerald-400" />
             </div>
             <div className="min-w-0">
-              <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-slate-400 mb-0.5">
+              <p className="text-[9px] font-medium uppercase tracking-[0.18em] text-slate-400 mb-0.5">
                 Account Profile
               </p>
-              <h2 className="text-[14px] font-extrabold text-[#0B1F3A] leading-snug truncate">
+              <h2 className="text-[14px] font-semibold text-[#0B1F3A] leading-snug truncate">
                 {user.name}
               </h2>
               <div className="mt-1 inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 border border-emerald-100">
                 <Star size={9} className="text-emerald-500" fill="#10b981" />
-                <span className="text-[10px] font-bold text-emerald-600">{user.role}</span>
+                <span className="text-[10px] font-medium text-emerald-600">{user.role}</span>
               </div>
             </div>
           </div>
@@ -195,28 +195,28 @@ const Sidebar = ({ mobileOpen = false, onClose }) => {
             <div className="flex flex-col items-center gap-0.5 px-4">
               <div className="flex items-center gap-1 mb-0.5">
                 <TrendingUp size={11} style={{ color: scoreColor }} />
-                <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-slate-400">
+                <p className="text-[9px] font-medium uppercase tracking-[0.14em] text-slate-400">
                   Credit Score
                 </p>
               </div>
-              <p className="text-[22px] font-black leading-none" style={{ color: scoreColor }}>
+              <p className="text-[22px] font-semibold leading-none" style={{ color: scoreColor }}>
                 {user.score}
               </p>
-              <p className="text-[9px] font-semibold text-slate-400">Excellent</p>
+              <p className="text-[9px] font-medium text-slate-400">Excellent</p>
             </div>
 
             {/* KYC */}
             <div className="flex flex-col items-center gap-0.5 px-4">
               <div className="flex items-center gap-1 mb-0.5">
                 <ShieldCheck size={11} className="text-slate-400" />
-                <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-slate-400">
+                <p className="text-[9px] font-medium uppercase tracking-[0.14em] text-slate-400">
                   KYC Status
                 </p>
               </div>
-              <p className="text-[22px] font-black leading-none text-emerald-600">{user.kyc}</p>
+              <p className="text-[22px] font-semibold leading-none text-emerald-600">{user.kyc}</p>
               <div className="flex items-center gap-1">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                <p className="text-[9px] font-semibold text-emerald-500">Active</p>
+                <p className="text-[9px] font-medium text-emerald-500">Active</p>
               </div>
             </div>
           </div>
@@ -224,7 +224,7 @@ const Sidebar = ({ mobileOpen = false, onClose }) => {
 
         {/* ── Nav ── */}
         <nav className="flex-1 overflow-y-auto px-4 pt-5 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <p className="mb-2 px-1 text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400">
+          <p className="mb-2 px-1 text-[9px] font-medium uppercase tracking-[0.2em] text-slate-400">
             Quick access
           </p>
           <div className="space-y-1.5">
@@ -262,14 +262,14 @@ const Sidebar = ({ mobileOpen = false, onClose }) => {
                     </div>
                     <div>
                       <p
-                        className={`text-[13px] font-bold leading-snug ${
+                        className={`text-[13px] font-medium leading-snug ${
                           active ? 'text-white' : 'text-[#0B1F3A]'
                         }`}
                       >
                         {item.label}
                       </p>
                       <p
-                        className={`text-[11px] font-medium leading-snug ${
+                        className={`text-[11px] font-normal leading-snug ${
                           active ? 'text-white/60' : 'text-slate-400'
                         }`}
                       >
@@ -306,7 +306,7 @@ const Sidebar = ({ mobileOpen = false, onClose }) => {
             type="button"
             onClick={handleLogout}
             whileTap={{ scale: 0.97 }}
-            className="group flex w-full items-center justify-center gap-2.5 rounded-2xl border border-rose-100 bg-rose-50 px-4 py-3.5 text-[13px] font-bold text-rose-600 transition-all hover:bg-rose-100 hover:border-rose-200 hover:shadow-sm"
+            className="group flex w-full items-center justify-center gap-2.5 rounded-2xl border border-rose-100 bg-rose-50 px-4 py-3.5 text-[13px] font-medium text-rose-600 transition-all hover:bg-rose-100 hover:border-rose-200 hover:shadow-sm"
           >
             <LogOut
               size={16}

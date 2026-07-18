@@ -73,7 +73,7 @@ const Dashboard = () => {
                         <motion.h1
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-3xl font-black text-primary tracking-tight"
+                            className="text-2xl font-semibold text-primary tracking-tight"
                         >
                             Hello, Aman! 👋
                         </motion.h1>
@@ -88,8 +88,8 @@ const Dashboard = () => {
                             <TrendingUp size={20} />
                         </div>
                         <div>
-                            <p className="text-[10px] font-bold text-textSecondary uppercase tracking-widest">Credit Score</p>
-                            <p className="text-lg font-black text-primary leading-none">742</p>
+                            <p className="text-[10px] font-medium text-textSecondary uppercase tracking-widest">Credit Score</p>
+                            <p className="text-lg font-semibold text-primary leading-none">742</p>
                         </div>
                     </div>
                 </header>
@@ -97,12 +97,12 @@ const Dashboard = () => {
                 {/* Loan Offers Carousel */}
                 <section className="mb-12">
                     <div className="flex items-center justify-between mb-6">
-                        <h2 className="text-xl font-bold text-primary flex items-center gap-2">
-                            <CreditCard size={22} className="text-gold" /> Featured Loan Offers
+                        <h2 className="text-lg font-medium text-primary flex items-center gap-2">
+                            <CreditCard size={20} className="text-gold" /> Featured Loan Offers
                         </h2>
                         <button
                             onClick={scrollToCategories}
-                            className="text-xs font-bold text-gold uppercase tracking-widest hover:underline"
+                            className="text-xs font-medium text-gold uppercase tracking-widest hover:underline"
                         >
                             View All
                         </button>
@@ -131,9 +131,9 @@ const Dashboard = () => {
                     <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-3">
                             <div style={{ width: 4, height: 26, borderRadius: 4, background: 'linear-gradient(180deg,#F4A100,#FFD166)', boxShadow: '0 0 10px rgba(244,161,0,0.3)', flexShrink: 0 }} />
-                            <h2 className="text-xl font-bold text-primary" style={{ letterSpacing: '-0.02em' }}>Loan Categories</h2>
+                            <h2 className="text-lg font-medium text-primary" style={{ letterSpacing: '-0.02em' }}>Loan Categories</h2>
                         </div>
-                        <p className="text-xs font-bold text-textSecondary uppercase tracking-widest">Select to proceed</p>
+                        <p className="text-xs font-medium text-textSecondary uppercase tracking-widest">Select to proceed</p>
                     </div>
 
                     <motion.div
@@ -154,14 +154,13 @@ const Dashboard = () => {
                     </motion.div>
                 </section>
 
-                {/* Account Summary Snippet */}
                 <section
                     className="rounded-[32px] p-8 border relative overflow-hidden"
                     style={{
-                        background: 'var(--card-bg)',
-                        borderColor: 'var(--border-color)',
-                        backdropFilter: 'blur(12px)',
-                        boxShadow: '0 4px 32px rgba(0,0,0,0.05)',
+                        background: 'rgba(255, 255, 255, 0.45)',
+                        borderColor: 'rgba(255, 255, 255, 0.6)',
+                        backdropFilter: 'blur(20px)',
+                        boxShadow: '0 8px 32px rgba(11, 60, 109, 0.08)',
                     }}
                 >
                     {/* Decorative blobs */}
@@ -169,8 +168,8 @@ const Dashboard = () => {
                     <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full -ml-16 -mb-16 blur-3xl" style={{ background: 'radial-gradient(circle, rgba(255,255,153,0.20) 0%, transparent 70%)' }} />
                     <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="text-center md:text-left">
-                            <h3 className="text-2xl font-black text-primary mb-2">Grow with Creditu</h3>
-                            <p className="text-textSecondary max-w-md font-medium">
+                            <h3 className="text-xl font-semibold text-primary mb-2">Grow with Creditu</h3>
+                            <p className="text-textSecondary max-w-md font-medium text-sm">
                                 Unlock higher loan limits and better interest rates by completing your profile and maintaining a good credit behavior.
                             </p>
                         </div>
@@ -179,7 +178,7 @@ const Dashboard = () => {
                             whileTap={{ scale: 0.95 }}
                             onClick={() => navigate('/user/status')}
                             style={{ background: 'linear-gradient(135deg, #0B3C6D 0%, #1a5a9e 100%)', boxShadow: '0 8px 24px rgba(11,60,109,0.30)' }}
-                            className="text-white px-8 py-4 rounded-2xl font-bold min-w-[200px]"
+                            className="text-white px-6 py-3 rounded-xl font-medium min-w-[180px]"
                         >
                             Complete Profile
                         </motion.button>

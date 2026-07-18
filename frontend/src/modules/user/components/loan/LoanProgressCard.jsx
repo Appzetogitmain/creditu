@@ -149,7 +149,7 @@ const ProgressCard = ({ percentage = 35 }) => {
               }} />
               <h3 style={{
                 fontSize: 22, fontWeight: 800, color: 'var(--text-primary)',
-                letterSpacing: '-0.03em', fontFamily: "'Inter', 'Poppins', sans-serif",
+                letterSpacing: '-0.03em',
                 margin: 0,
               }}>Loan Progress</h3>
             </div>
@@ -310,12 +310,6 @@ const ProgressCard = ({ percentage = 35 }) => {
             const isLocked = step.locked;
 
             /* Per-step styles */
-            const cardBg = isCompleted ? 'rgba(0,166,81,0.07)'
-              : isActive ? 'rgba(244,161,0,0.06)'
-                : 'var(--card-bg)';
-            const borderCol = isCompleted ? 'rgba(0,166,81,0.18)'
-              : isActive ? 'rgba(244,161,0,0.22)'
-                : 'var(--border-color)';
             const iconBg = isCompleted ? 'linear-gradient(135deg, #00A651, #00c874)'
               : isActive ? 'linear-gradient(135deg, #0A2C5A, #0d3870)'
                 : 'var(--border-color)';
@@ -330,19 +324,12 @@ const ProgressCard = ({ percentage = 35 }) => {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 + index * 0.12, type: 'spring', stiffness: 120 }}
-                whileHover={{
-                  y: -2, boxShadow: isCompleted
-                    ? '0 8px 28px rgba(0,166,81,0.14), 0 0 0 1.5px rgba(0,166,81,0.28)'
-                    : isActive
-                      ? '0 8px 28px rgba(10,44,90,0.12), 0 0 0 1.5px rgba(244,161,0,0.28)'
-                      : '0 4px 16px rgba(10,44,90,0.06)'
-                }}
                 style={{
                   display: 'flex', alignItems: 'center', gap: 14,
-                  padding: '16px 18px', borderRadius: 16,
-                  background: cardBg,
-                  border: `1px solid ${borderCol}`,
-                  cursor: 'default', transition: 'box-shadow 0.25s',
+                  padding: '12px 0',
+                  background: 'transparent',
+                  border: 'none',
+                  cursor: 'default',
                   position: 'relative', overflow: 'hidden',
                 }}
               >

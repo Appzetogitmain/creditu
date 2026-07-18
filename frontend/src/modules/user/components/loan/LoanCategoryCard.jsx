@@ -166,7 +166,7 @@ const CategoryCard = ({ icon: Icon, title, status, count, disabled = false }) =>
           }}>
             {BadgeIcon && <BadgeIcon size={10} color={cfg.badgeColor} strokeWidth={2.5} />}
             <span style={{
-              fontSize: 9, fontWeight: 800, color: cfg.badgeColor,
+              fontSize: 9, fontWeight: 500, color: cfg.badgeColor,
               textTransform: 'uppercase', letterSpacing: '0.12em',
             }}>{cfg.label}</span>
           </div>
@@ -178,7 +178,7 @@ const CategoryCard = ({ icon: Icon, title, status, count, disabled = false }) =>
             background: cfg.badgeBg, borderRadius: 100, padding: '4px 9px',
           }}>
             <Lock size={9} color={cfg.badgeColor} />
-            <span style={{ fontSize: 9, fontWeight: 800, color: cfg.badgeColor, textTransform: 'uppercase', letterSpacing: '0.12em' }}>Soon</span>
+            <span style={{ fontSize: 9, fontWeight: 500, color: cfg.badgeColor, textTransform: 'uppercase', letterSpacing: '0.12em' }}>Soon</span>
           </div>
         )}
       </div>
@@ -186,10 +186,9 @@ const CategoryCard = ({ icon: Icon, title, status, count, disabled = false }) =>
       {/* ── TITLE + SUBTITLE */}
       <div style={{ position: 'relative', zIndex: 1 }}>
         <h4 style={{
-          fontSize: 13, fontWeight: 750, margin: '0 0 4px 0',
+          fontSize: 14, fontWeight: 500, margin: '0 0 4px 0',
           color: disabled ? '#5B21B6' : 'var(--text-primary)',
-          letterSpacing: '-0.01em', lineHeight: 1.25,
-          fontFamily: "'Inter', 'Poppins', sans-serif",
+          letterSpacing: '0', lineHeight: 1.25,
         }}>{title}</h4>
 
         {count && (

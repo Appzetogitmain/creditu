@@ -82,7 +82,7 @@ const LoanCard = ({ type, rate, amount, gradient = 'blue', comingSoon = false, i
           <div className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center">
             <CreditCard size={24} className="opacity-20" />
           </div>
-          <p className="text-[10px] font-bold uppercase tracking-[2px] opacity-30">More Offers Coming</p>
+          <p className="text-[10px] font-medium uppercase tracking-[2px] opacity-30">More Offers Coming</p>
         </div>
       </div>
     );
@@ -106,7 +106,7 @@ const LoanCard = ({ type, rate, amount, gradient = 'blue', comingSoon = false, i
             handleApply();
           }
         }}
-        className={`relative w-[340px] h-[210px] rounded-[24px] p-6 text-white shadow-2xl transition-all duration-300 preserve-3d overflow-hidden ${gradients[gradient]} ${comingSoon ? 'opacity-90 grayscale-[0.5]' : ''} ${!comingSoon && !isBlank ? 'cursor-pointer' : ''}`}
+        className={`relative w-[340px] h-[210px] rounded-[24px] p-6 text-white shadow-[0_12px_40px_-12px_rgba(0,0,0,0.5)] border border-white/20 transition-all duration-300 preserve-3d overflow-hidden ${gradients[gradient]} ${comingSoon ? 'opacity-90 grayscale-[0.5]' : ''} ${!comingSoon && !isBlank ? 'cursor-pointer hover:border-white/40 hover:shadow-[0_16px_48px_-12px_rgba(0,0,0,0.6)]' : ''}`}
       >
         {/* Glow Effect */}
         <div
@@ -127,15 +127,15 @@ const LoanCard = ({ type, rate, amount, gradient = 'blue', comingSoon = false, i
                   {[...Array(9)].map((_, i) => <div key={i} className="bg-white/40 rounded-[1px]" />)}
                 </div>
               </div>
-              <p className="text-[9px] font-semibold tracking-[1.5px] text-white/80 uppercase">CreditU Premier</p>
+              <p className="text-[9px] font-medium tracking-[1.5px] text-white/90 uppercase">CreditU Premier</p>
             </div>
             {comingSoon ? (
               <div className="bg-black/30 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 flex items-center gap-1.5">
                 <Lock size={12} className="text-gold" />
-                <span className="text-[9px] font-bold uppercase tracking-wider text-gold">Coming Soon</span>
+                <span className="text-[9px] font-medium uppercase tracking-wider text-gold">Coming Soon</span>
               </div>
             ) : (
-              <div className="bg-white/15 backdrop-blur-md px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider flex items-center gap-1 border border-white/10">
+              <div className="bg-white/15 backdrop-blur-md px-3 py-1 rounded-full text-[9px] font-medium uppercase tracking-wider flex items-center gap-1 border border-white/10">
                 <Zap size={10} className="fill-gold text-gold" />
                 <span className="text-white">Active</span>
               </div>
@@ -143,22 +143,22 @@ const LoanCard = ({ type, rate, amount, gradient = 'blue', comingSoon = false, i
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-2 tracking-tight leading-tight">{type}</h3>
+            <h3 className="text-2xl font-medium mb-2 tracking-tight leading-tight">{type}</h3>
             <div className="flex items-center gap-6">
               <div>
-                <p className="text-[9px] uppercase tracking-widest text-white/50 font-bold mb-1">Max Limit</p>
-                <p className="text-xl font-bold tracking-tight">₹{amount}</p>
+                <p className="text-[9px] uppercase tracking-widest text-white/80 font-medium mb-1">Max Limit</p>
+                <p className="text-xl font-medium tracking-tight">₹{amount}</p>
               </div>
               <div className="w-[1px] h-8 bg-white/15" />
               <div>
-                <p className="text-[9px] uppercase tracking-widest text-white/50 font-bold mb-1">Interest</p>
-                <p className="text-xl font-bold tracking-tight">{rate}% <span className="text-[10px] font-medium opacity-60">p.a.</span></p>
+                <p className="text-[9px] uppercase tracking-widest text-white/80 font-medium mb-1">Interest</p>
+                <p className="text-xl font-medium tracking-tight">{rate}% <span className="text-[10px] font-medium opacity-70">p.a.</span></p>
               </div>
             </div>
           </div>
 
           <div className="flex items-center justify-between gap-4">
-            <p className="text-[11px] font-medium text-white/70 leading-relaxed max-w-[200px] line-clamp-2">
+            <p className="text-[11px] font-medium text-white/90 leading-snug max-w-[220px] line-clamp-2">
               {description}
             </p>
             {!comingSoon && (
@@ -183,7 +183,7 @@ const LoanCard = ({ type, rate, amount, gradient = 'blue', comingSoon = false, i
             <div className="bg-white/10 p-2 rounded-full mb-2">
               <Info size={24} className="text-gold" />
             </div>
-            <p className="text-xs font-bold uppercase tracking-widest">Coming Soon</p>
+            <p className="text-xs font-medium uppercase tracking-widest">Coming Soon</p>
           </div>
         )}
       </div>

@@ -73,7 +73,7 @@ const swipePower = (offset, velocity) => {
 };
 
 const CarouselSkeleton = () => (
-    <div style={{ width: '100%', height: 240, background: '#0B3C6D', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 24px', gap: 12 }}>
+    <div style={{ width: '100%', height: 200, background: '#0B3C6D', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 24px', gap: 12 }}>
         <div className="skeleton" style={{ width: 100, height: 18, borderRadius: 100 }} />
         <div className="skeleton" style={{ width: '70%', height: 32, borderRadius: 8 }} />
         <div className="skeleton" style={{ width: '50%', height: 20, borderRadius: 8 }} />
@@ -147,7 +147,7 @@ const HeroCarousel = ({ onCtaClick }) => {
             style={{
                 position: 'relative',
                 width: '100%',
-                height: 240,
+                height: 200,
                 overflow: 'hidden',
                 borderRadius: 0,
                 background: '#0B3C6D',

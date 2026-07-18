@@ -38,7 +38,7 @@ const Leadership = () => {
         >
           <ArrowLeft size={20} className="text-gray-700" />
         </button>
-        <h1 className="text-[18px] font-bold text-[#1a1a1a]">Leadership Team</h1>
+        <h1 className="text-[18px] font-medium text-[#1a1a1a]">Leadership Team</h1>
       </div>
 
       <div className="max-w-md mx-auto px-4 pt-6">
@@ -46,7 +46,7 @@ const Leadership = () => {
           <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 mb-3">
             <Users size={24} strokeWidth={2} />
           </div>
-          <h2 className="text-[22px] font-black text-[#1a1a1a] leading-tight mb-2">
+          <h2 className="text-[22px] font-medium text-[#1a1a1a] leading-tight mb-2">
             Meet the Visionaries
           </h2>
           <p className="text-[13px] text-gray-500 max-w-[280px] mx-auto">
@@ -63,7 +63,7 @@ const Leadership = () => {
               transition={{ duration: 0.3, delay: index * 0.1 }}
               className="flex items-center gap-4 bg-white p-4 rounded-2xl border border-gray-100 shadow-sm transition hover:shadow-md hover:border-gray-200"
             >
-              <div className="h-[72px] w-[72px] flex-shrink-0 overflow-hidden rounded-full bg-gray-50 border-2 border-white shadow-sm ring-1 ring-gray-100">
+              <div className="h-[72px] w-[72px] flex-shrink-0 overflow-hidden rounded-xl bg-gray-50 border border-gray-100 shadow-sm">
                 <img 
                   src={leader.image} 
                   alt={leader.name} 
@@ -71,8 +71,8 @@ const Leadership = () => {
                 />
               </div>
               <div className="flex-1">
-                <h3 className="text-[16px] font-bold text-[#1a1a1a] mb-0.5">{leader.name}</h3>
-                <p className="text-[12px] font-semibold text-[#1A453A] leading-snug">{leader.role}</p>
+                <h3 className="text-[16px] font-medium text-[#1a1a1a] mb-0.5">{leader.name}</h3>
+                <p className="text-[12px] font-medium text-[#1A453A] leading-snug">{leader.role}</p>
               </div>
             </motion.div>
           ))}
